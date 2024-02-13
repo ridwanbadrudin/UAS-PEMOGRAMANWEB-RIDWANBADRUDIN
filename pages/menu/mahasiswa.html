@@ -1,0 +1,85 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Mahasiswa</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Mahasiswa</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark" id="inputMahasiswaCardHeader" onclick="toggleInputMahasiswaCardBody()">
+            <h3 class="card-title"><i id="iconToggle" class="fas fa-minus pe-2"></i> Input Mahasiswa</h3>
+          </div>
+          <div class="card-body" id="inputMahasiswaCardBody">
+            <form id="createMahasiswaForm" onsubmit="return false">
+              <a id="fieldIdMahasiswa" class="mb-3" style="display: none;"></a>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label><input type="text" class="form-control" id="nama"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="npm" class="form-label">NPM</label><input type="number" class="form-control" id="npm"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="kelas" class="form-label">Kelas</label><input type="text" class="form-control" id="kelas"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="gambar" class="form-label">Foto Mahasiswa</label>
+                <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*"
+                  onchange="previewImage(this);">
+                <img id="preview" class="mt-3" style="max-width: 300px; max-height: 300px; display: none;"
+                  alt="Preview Gambar">
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="uploadMahasiswa()">Submit</button>
+              <button type="button" class="btn btn-danger" style="display: none;" id="batalEdit"
+                onclick="batalEditMahasiswa()">Cancle</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h3 class="card-title">Data Mahasiswa</h3>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-primary" onclick="exportExcel()">Excel</button>
+            <button class="btn btn-primary" onclick="exportPdf()">PDF</button>
+            <table id="mahasiswaTable" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nama</th>
+                  <th>NPM</th>
+                  <th>Kelas</th>
+                  <th>Gambar</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

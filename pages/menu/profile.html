@@ -1,0 +1,148 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Profile</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Profile</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h3 class="card-title">Profile</h3>
+          </div>
+          <div class="card-body">
+            <form id="profileForm" onsubmit="return false">
+              <div class="mb-3">
+                <label for="currentEmail" class="form-label">Current Email</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" id="currentEmail" disabled/>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="currentName" class="form-label">Current Name</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="currentName" disabled/>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="currentPassword" class="form-label">Current Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="currentPassword" required /><button
+                    class="btn btn-outline-secondary" type="button" onclick="togglePassword('currentPassword')">
+                    Show
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h3 class="card-title">Change Password</h3>
+          </div>
+          <div class="card-body">
+            <form id="profileForm0" onsubmit="return false">
+              <div class="mb-3">
+                <label for="currentPassword0" class="form-label">Current Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="currentPassword0" required /><button
+                    class="btn btn-outline-secondary" type="button" onclick="togglePassword('currentPassword0')">
+                    Show
+                  </button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="newPassword" class="form-label">New Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="newPassword" required />
+                  <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('newPassword')">
+                    Show
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="changePassword()">Submit</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h3 class="card-title">Change Email</h3>
+          </div>
+          <div class="card-body">
+            <form id="profileForm1" onsubmit="return false">
+              <div class="mb-3">
+                <label for="newEmail" class="form-label">New Email</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" id="newEmail" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="currentPassword1" class="form-label">Current Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="currentPassword1" required /><button
+                    class="btn btn-outline-secondary" type="button" onclick="togglePassword('currentPassword1')">
+                    Show
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="changeEmail()">Submit</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h3 class="card-title">Change Name</h3>
+          </div>
+          <div class="card-body">
+            <form id="profileForm2" onsubmit="return false">
+              <div class="mb-3">
+                <label for="newName" class="form-label">New Name</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="newName" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="currentPassword2" class="form-label">Current Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="currentPassword2" required /><button
+                    class="btn btn-outline-secondary" type="button" onclick="togglePassword('currentPassword2')">
+                    Show
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="changeName()">Submit</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
